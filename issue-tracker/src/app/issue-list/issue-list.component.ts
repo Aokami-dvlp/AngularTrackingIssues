@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IssuesService } from '../issues.service';
 import { Issue } from '../issue';
+import { IssuesService } from '../issues.service';
+
 
 @Component({
   selector: 'app-issue-list',
@@ -11,14 +12,14 @@ export class IssueListComponent implements OnInit {
 
   issues: Issue[] = [];
 
-  constructor(private IssueService: IssuesService) { }
+  constructor(private issueService: IssuesService) { }
 
   ngOnInit(): void {
     this.getIssues();
   }
 
   private getIssues(){
-    this.issues = this.IssueService.getPendingIssues();
+    this.issues = this.issueService.getPendingIssues();
   }
 
 }
