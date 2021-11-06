@@ -1,0 +1,10 @@
+<clr-modal [clrModalOpen]="issueNo !== null" [clrModalClosable]="false">
+  <h3 class="modal-title">Resolve Issue # {{issueNo}}</h3>
+  <div class="modal-body">
+    <p>Ma non starai a fa na cazzata?</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-outline" type="button" (click)="disagree()">No</button>
+    <button class="btn btn-outline" type="button" (click)="agree()">Si ma continua</button>
+  </div>
+  </clr-modal>
